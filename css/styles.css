@@ -176,23 +176,40 @@ body {
 
 /* Hero */
 .hero {
+  height: 600px;
+  padding: 188px 472px;
+  align-content: center;
   background-color: var(--dark);
   text-align: center;
 }
 
 .hero-title {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0px;
+  margin-bottom: 48;
+  text-align: center;
+  width: 496px;
+
   color: var(--white-background);
   font-weight: 700;
   font-size: 56px;
   line-height: 1.07;
   letter-spacing: 0.02em;
-  margin-top: 0;
-  margin-bottom: 48;
 }
 
 /* Buttons */
 
 .btn {
+  display: inline-block;
+  min-width: 169px;
+  text-align: center;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  margin: auto;
+
   color: var(--white-background);
   background-color: var(--primary-brand);
   font-family: "Roboto", sans-serif;
@@ -203,14 +220,7 @@ body {
   letter-spacing: 0.04em;
   cursor: pointer;
   border-radius: 4px;
-  padding-left: 32px;
-  padding-right: 32px;
-  padding-top: 16px;
-  padding-bottom: 16px;
-  display: inline-block;
   border: none;
-  min-width: 169px;
-  text-align: center;
 }
 
 .btn:hover,
@@ -389,4 +399,33 @@ body {
 .footer-text {
   width: 264;
   color: var(--accent);
+}
+
+.btns-portfolio {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  margin-left: 76px;
+  justify-content: center;
+}
+
+.card-set {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  align-content: stretch;
+  justify-content: center;
+}
+
+.btns-portfolio .item + .item {
+  margin-left: 24px;
+}
+
+.item-btns {
+  display: flex;
+  flex-basis: calc((100%-72px) / 4);
 }
