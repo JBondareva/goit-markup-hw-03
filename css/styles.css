@@ -383,7 +383,6 @@ body {
 }
 
 .container-footer {
-  /* width: 264px; */
 }
 .logo-footer {
   color: var(--primary-brand);
@@ -412,6 +411,7 @@ body {
   margin-top: 16px;
   width: 264px;
 }
+
 /* Portfolio novigation */
 
 .btn-filter {
@@ -483,10 +483,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-
-  /* 
-  align-content: stretch;
-  justify-content: center; */
+  margin-top: 72px;
 }
 
 .card {
@@ -494,11 +491,6 @@ body {
   margin-left: 24px;
   margin-top: 42px;
   background-color: var(--white-background);
-  /* border: 1px solid var(--accent); */
-  border-left: 1px solid var(--accent);
-  border-right: 1px solid var(--accent);
-  border-bottom: 1px solid var(--accent);
-  /* width: calc((100%-48px) / 3); */
 }
 
 .card-title {
@@ -525,6 +517,10 @@ body {
   padding-bottom: 32px;
   padding-left: 16px;
   padding-right: 16px;
+
+  border-left: 1px solid var(--accent);
+  border-right: 1px solid var(--accent);
+  border-bottom: 1px solid var(--accent);
 }
 img {
   display: block;
