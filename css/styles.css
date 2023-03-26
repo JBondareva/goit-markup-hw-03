@@ -40,6 +40,14 @@ address {
   padding-right: 15px;
   margin: 0 auto;
 }
+.container-portfolio {
+  width: 1158;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  margin-left: auto;
+  margin-right: auto;
+}
 
 .list {
   list-style: none;
@@ -57,10 +65,13 @@ address {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
 /* Header */
 .header {
   background-color: var(--white-background);
+  border-bottom: solid 1px var(--accent);
 }
+
 /* Body */
 body {
   color: var(--text);
@@ -94,7 +105,6 @@ body {
 }
 
 /* Navigation */
-
 .header-nav {
   display: flex;
   align-items: center;
@@ -199,7 +209,6 @@ body {
 }
 
 /* Buttons */
-
 .btn {
   display: inline-block;
   min-width: 169px;
@@ -242,40 +251,20 @@ body {
   min-width: 169px;
   text-align: center;
 }
-.btn-filter {
-  color: var(--primary-brand);
-  background-color: var(--light);
-  border: 1px solid var(--accent);
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  align-items: center;
-  text-align: center;
-  letter-spacing: 0.04em;
-  cursor: pointer;
-}
-
-.btn-filter:hover,
-.btn-filter:focus {
-  color: var(--white-background);
-  background-color: var(--pressed-state);
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  align-items: center;
-  text-align: center;
-  letter-spacing: 0.04em;
-  cursor: pointer;
-}
 
 /* Section */
 .section {
   padding-top: 120px;
   padding-bottom: 120px;
 }
+.section-about {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  display: flex;
+}
 .section-team {
+  padding-top: 120px;
+  padding-bottom: 120px;
   background-color: var(--light);
 }
 .section-title {
@@ -291,11 +280,18 @@ body {
   margin-top: 0;
 }
 
+.section-portfolio {
+  padding-top: 96px;
+  padding-bottom: 120px;
+}
+
 /* 01 About */
+.about-item {
+  padding: 0px;
+}
 
 .about {
   display: flex;
-  flex-wrap: wrap;
   color: var(--text);
   gap: 24px;
 }
@@ -307,11 +303,20 @@ body {
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
-  margin-top: 0;
-  margin-bottom: 8;
 }
 
-.about .item {
+.about-text {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--text);
+  max-width: 264px;
+}
+
+.about .item-about {
+  /* flex-basis: calc((100%-72px) / 4); */
   width: 264px;
 }
 
@@ -322,14 +327,6 @@ body {
   justify-content: center;
   gap: 24px;
   color: var(--dark);
-}
-
-.about-text {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
 }
 
 /* 03 Team */
@@ -363,9 +360,31 @@ body {
 }
 .team-item {
   width: 264px;
+  border-radius: 4px;
   background-color: var(--white-background);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
+    0px 2px 1px rgba(46, 47, 66, 0.08);
 }
+
+.team-item-content {
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
 /* Footer */
+.footer {
+  padding-top: 100px;
+  padding-bottom: 100px;
+
+  color: var(--white-background);
+  background-color: var(--dark);
+}
+
+.container-footer {
+  /* width: 264px; */
+}
 .logo-footer {
   color: var(--primary-brand);
   font-family: "Raleway", sans-serif;
@@ -389,43 +408,126 @@ body {
   text-transform: uppercase;
   text-decoration: none;
 }
-.footer {
-  padding-top: 100px;
-  padding-bottom: 100px;
-  color: var(--white-background);
-  background-color: var(--dark);
-}
-
 .footer-text {
-  width: 264;
-  color: var(--accent);
+  margin-top: 16px;
+  width: 264px;
+}
+/* Portfolio novigation */
+
+.btn-filter {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 24px;
+
+  color: var(--primary-brand);
+  background-color: var(--light);
+  border: 1px solid var(--accent);
+  border-radius: 4px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.04em;
 }
 
-.btns-portfolio {
+.btn-filter:hover,
+.btn-filter:focus {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  padding: 12px 24px;
+  color: var(--white-background);
+  background-color: var(--pressed-state);
+  border-radius: 4px;
+  /* box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12); */
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+}
+.nav-portfolio {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 24px;
   padding: 0;
   margin: 0;
   list-style: none;
-  display: flex;
   margin-left: 76px;
   justify-content: center;
 }
 
+.nav-portfolio .item + .item {
+  margin-left: 24px;
+}
+
+/* Portfolio card-set */
 .card-set {
   padding: 0;
   margin: 0;
   list-style: none;
+
   display: flex;
   flex-wrap: wrap;
-  gap: 24px;
-  align-content: stretch;
   justify-content: center;
+
+  /* 
+  align-content: stretch;
+  justify-content: center; */
 }
 
-.btns-portfolio .item + .item {
+.card {
+  flex-basis: calc(100% / 4 - 5px);
   margin-left: 24px;
+  margin-top: 42px;
+  background-color: var(--white-background);
+  /* border: 1px solid var(--accent); */
+  border-left: 1px solid var(--accent);
+  border-right: 1px solid var(--accent);
+  border-bottom: 1px solid var(--accent);
+  /* width: calc((100%-48px) / 3); */
 }
 
-.item-btns {
-  display: flex;
-  flex-basis: calc((100%-72px) / 4);
+.card-title {
+  margin-bottom: 8px;
+  color: var(--dark);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  text-align: start;
+  letter-spacing: 0.02em;
 }
+
+.card-text {
+  margin-top: 8px;
+  color: var(--text);
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: start;
+  letter-spacing: 0.02em;
+}
+
+.card-content {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+/* вже виправила, потрібно було додати до img властивості height: auto;  width: 100%; */
