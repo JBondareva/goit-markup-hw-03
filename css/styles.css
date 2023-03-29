@@ -52,7 +52,7 @@ ol {
 }
 
 .container-portfolio {
-  width: 1158;
+  width: 1158px;
   padding-left: 15px;
   padding-right: 15px;
 
@@ -109,10 +109,10 @@ ol {
   margin-top: 0;
 }
 
-/* .section-portfolio {
+.section-portfolio {
   padding-top: 96px;
-  padding-bottom: 120px;
-} */
+  /* padding-bottom: 120px; */
+}
 
 /* Header */
 .header {
@@ -499,7 +499,6 @@ body {
 }
 
 .card-text {
-  margin-top: 8px;
   color: var(--text);
   font-size: 16px;
   line-height: 1.5;
